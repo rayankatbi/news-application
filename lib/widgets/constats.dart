@@ -5,4 +5,5 @@ class Ress {
   static const itemList = "assets/images/listitem.jpg";
   static const avatar = "assets/images/avatar.png";
   static const Color blueColr = Color(0xff69BDFD);
+
 }

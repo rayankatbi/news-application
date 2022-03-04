@@ -7,18 +7,21 @@ class ListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 10,
+            vertical: 10,
+          ),
           child: Row(
             children: <Widget>[
-              Expanded(flex: 2,
-                  child: GestureDetector(
-                  onTap:(){
-                  Navigator.pushNamed(context, '/sub-article');
-                  },
-                  child: Image.asset(Ress.itemList,))),
+              Expanded(
+                  flex: 2,
+                  child: Image.asset(
+                    Ress.itemList,
+                  )),
               Expanded(
                 flex: 3,
                 child: Column(
@@ -56,24 +59,46 @@ class ListWidget extends StatelessWidget {
                             ),
                           ],
                         ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.more_horiz,
-                          ),
+                        PopupMenuButton(
+                          icon: Icon(Icons.more_horiz),
+                          itemBuilder: (context) => [
+                            PopupMenuItem(
+                              child: Row(
+                                children: [
+                                  Icon(Icons.save_alt),
+                                  CustomText(
+                                    title: "Share",
+                                  ),
+                                ],
+                              ),
+                            ),
+                            PopupMenuItem(
+                              child: Row(
+                                children: [
+                                  Icon(Icons.bookmark_border),
+                                  CustomText(
+                                    title: "Bookmark",
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.grey.shade300,
+                ),
+              )
             ],
           ),
         ),
-        Divider(
-          thickness: 1,
-          color: Colors.grey.shade300,
-        )
       ],
     );
   }

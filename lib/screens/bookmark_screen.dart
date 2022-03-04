@@ -11,7 +11,7 @@ class _BookMarkScreenState extends State<BookMarkScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('BookMarkScreen'),
+      body: Center(child: Text('BookMarkScreen')),
     );
   }
 }

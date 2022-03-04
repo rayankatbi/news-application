@@ -7,12 +7,16 @@ class ScienceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-          itemCount: 6,
-          physics: BouncingScrollPhysics(),
-          itemBuilder: (BuildContext context,int index){
-        return ListWidget();
-      }),
-    );
+        body: ListView.builder(
+            itemCount: 6,
+            physics: BouncingScrollPhysics(),
+            itemBuilder: (BuildContext context, int index) {
+              return InkWell(
+                child: ListWidget(),
+                onTap: () {
+                  //   Navigator.pushNamed(context, '/sub-article' , arguments:model[index] );
+                },
+              );
+            }));
   }
 }

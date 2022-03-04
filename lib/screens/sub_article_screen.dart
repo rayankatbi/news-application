@@ -4,13 +4,15 @@ import 'package:news_app/widgets/custom_text.dart';
 
 class SubArticle extends StatefulWidget {
   static const routeName = '/sub-article';
-  const SubArticle({Key? key}) : super(key: key);
+  const SubArticle({Key? key }) : super(key: key);
+
 
   @override
   State<SubArticle> createState() => _SubArticleState();
 }
 
 class _SubArticleState extends State<SubArticle> {
+ //final data =  ModalRoute.of(context).setting as Model
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
