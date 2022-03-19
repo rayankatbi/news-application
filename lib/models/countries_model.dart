@@ -21,7 +21,7 @@ class CountriesModel  {
           json["dataModel"].map(
             (x) => DataModel.fromJson(x),
           ),
-        ),
+        ).toList(),
       );
   Map<String, dynamic> toJson() => {
         'paginationModel': paginationModel.toString(),

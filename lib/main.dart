@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/data_model.dart';
+import 'package:news_app/provider/country_provider.dart';
 import 'package:news_app/provider/data_provider.dart';
 import 'package:news_app/screens/account_screen.dart';
 import 'package:news_app/screens/home_screen.dart';
@@ -44,5 +45,5 @@ class MyApp extends StatelessWidget {
 }
 
 List<SingleChildWidget> providers = [
-  ChangeNotifierProvider<Data>(create: (_) => Data()),
+  ChangeNotifierProvider<Country>(create: (_) => Country()),
 ];
